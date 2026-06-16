@@ -2,7 +2,7 @@ fila_espera = []
 clientes_atendidos = 0
 
 while True:
-    print("\n=== LISTA DE ESPERA DO RESTAURANTE ===")
+    print("\n LISTA DE ESPERA DO RESTAURANTE")
     print("1 - Adicionar cliente")
     print("2 - Chamar próximo cliente")
     print("3 - Desistência")
@@ -12,7 +12,7 @@ while True:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        nome = input("Digite o nome do cliente: ").strip()
+        nome = input("Digite o nome do cliente: ")
 
         if nome in fila_espera:
             print("Esse cliente já está na fila.")
@@ -29,7 +29,7 @@ while True:
             print(f"Cliente chamado: {proximo}")
 
     elif opcao == "3":
-        nome = input("Digite o nome do cliente que desistiu: ").strip()
+        nome = input("Digite o nome do cliente que desistiu: ")
 
         if nome in fila_espera:
             fila_espera.remove(nome)
